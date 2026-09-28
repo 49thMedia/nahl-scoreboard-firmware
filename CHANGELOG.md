@@ -5,6 +5,15 @@ Versioning: MAJOR.MINOR.PATCH
 - MINOR (x.1.x): larger updates and new features
 - MAJOR (1.x.x): major changes or redesigns
 
+## v1.3.6 (2026-09-28)
+
+### Fixed
+- A download that got cut off partway showed a cryptic "JSON: IncompleteInput" error and wasn't retried until the next round, which is 45 seconds later for scores and standings, or 30 minutes for the update check. Now the scoreboard retries a cut-off or failed download right away, up to two more times (after 2 and 4 seconds). A single dropped connection no longer shows an error.
+
+### Changed
+- Error messages now name the feed that failed and say what happened, for example "Schedule: cut off 31/64 KB (closed)", "Standings: HTTP 503", "Update check: read Timeout", or "News: no headlines". They show on the page placeholder, in the footer ("Stale - Schedule: ..."), and on the Settings page for the update check.
+- The serial log records, for each download, the bytes received against the expected size, the free memory, the largest free memory block, and the Wi-Fi signal. This helps diagnose failures.
+
 ## v1.3.5 (2026-09-28)
 
 ### Added

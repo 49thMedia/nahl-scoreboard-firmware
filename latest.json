@@ -1,8 +1,8 @@
 {
-  "version": "1.3.5",
-  "url": "https://github.com/49thMedia/nahl-scoreboard-firmware/releases/download/v1.3.5/nahl-scoreboard-v1.3.5.bin",
-  "size": 1705040,
-  "sha256": "a6b5ad59c2dd2aa9f544da32f0baa77652a35f33edbd3ac9bc5e58b79e2d241a",
-  "notes": "Adds a Brightness slider on the phone setup page",
+  "version": "1.3.6",
+  "url": "https://github.com/49thMedia/nahl-scoreboard-firmware/releases/download/v1.3.6/nahl-scoreboard-v1.3.6.bin",
+  "size": 1706288,
+  "sha256": "9fb3db7e22a0e22b7112b29724ddc957d8861863c68c6a15317088b826de9f3e",
+  "notes": "Retries cut-off downloads and names the failing feed in errors",
   "min_version": "1.3.0"
 }
