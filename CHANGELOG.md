@@ -5,6 +5,16 @@ Versioning: MAJOR.MINOR.PATCH
 - MINOR (x.1.x): larger updates and new features
 - MAJOR (1.x.x): major changes or redesigns
 
+## v1.3.5 (2026-09-28)
+
+### Added
+- A Brightness slider for the scoreboard's screen on the phone setup page, in the "4 · Display" section. It goes from 10% to 100% in 5% steps. To open the setup page on a board that is already set up, hold a finger on the Settings page for 5 seconds.
+  - The scoreboard's screen follows the slider while you move it. Tap Save to keep the setting.
+  - It can't go below 10%, so the screen never goes dark.
+  - Boards that have never saved a brightness stay at 100%, the same as before.
+  - Like the "Invert colors" option in the same section, the setting is kept after a factory reset.
+- The confirmation page shown on the phone after saving ("All set") includes the saved brightness.
+
 ## v1.3.4 (2026-09-28)
 
 ### Changed
