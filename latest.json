@@ -1,0 +1,8 @@
+{
+  "version": "1.3.0",
+  "url": "https://github.com/49thMedia/nahl-scoreboard-firmware/releases/download/v1.3.0/nahl-scoreboard-v1.3.0.bin",
+  "size": 1686432,
+  "sha256": "2d3732c08da4176277be49df3f57fcb52ae985a6a70b4d7b099697e774edc35f",
+  "notes": "First release with over-the-air updates",
+  "min_version": "1.3.0"
+}
