@@ -5,6 +5,26 @@ Versioning: MAJOR.MINOR.PATCH
 - MINOR (x.1.x): larger updates and new features
 - MAJOR (1.x.x): major changes or redesigns
 
+## v1.3.4 (2026-09-28)
+
+### Changed
+- The "Invert colors" option now lives only on the phone setup page, in the "4 · Display" section. The colors change when you tap Save. To reach the setup page on a board that is already set up, hold a finger on the Settings page for 5 seconds.
+- The Invert button on the Settings page is gone, and the page looks as it did in v1.3.2.
+- Tapping the setup screen no longer flips the colors, and its "Colors look wrong? Tap the screen." line is gone.
+- The setting is still saved on the board and a factory reset still keeps it.
+
+## v1.3.3 (2026-09-28)
+
+### Added
+- "Invert colors" option for boards whose screen looks like a photo negative (common on some CYD boards, often the version with two USB ports). The colors flip right away and the choice is saved. There are four ways to change it:
+  - Tap the new **Invert** button on the Settings page, on the right under the gear.
+  - Tap the screen while the setup screen is showing. The setup screen says "Colors look wrong? Tap the screen."
+  - Tick **Invert colors** on the phone setup page, in the new "4 · Display" section.
+  - Send `invert` on the serial port.
+
+### Changed
+- A factory reset keeps the "Invert colors" choice. It belongs to the screen, not to the user, and keeping it means the reset and setup screens still show the right colors.
+
 ## v1.3.2 (2026-09-28)
 
 ### Fixed
