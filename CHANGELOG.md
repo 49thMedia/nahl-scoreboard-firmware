@@ -5,6 +5,11 @@ Versioning: MAJOR.MINOR.PATCH
 - MINOR (x.1.x): larger updates and new features
 - MAJOR (1.x.x): major changes or redesigns
 
+## v1.3.1 (2026-09-28)
+
+### Changed
+- The Settings page footer shows "OTA test OK" in green. This small change confirms that over-the-air updates work.
+
 ## v1.3.0 (2026-09-28)
 
 ### Added

@@ -1,8 +1,8 @@
 {
-  "version": "1.3.0",
-  "url": "https://github.com/49thMedia/nahl-scoreboard-firmware/releases/download/v1.3.0/nahl-scoreboard-v1.3.0.bin",
+  "version": "1.3.1",
+  "url": "https://github.com/49thMedia/nahl-scoreboard-firmware/releases/download/v1.3.1/nahl-scoreboard-v1.3.1.bin",
   "size": 1686432,
-  "sha256": "2d3732c08da4176277be49df3f57fcb52ae985a6a70b4d7b099697e774edc35f",
-  "notes": "First release with over-the-air updates",
+  "sha256": "a4e3aaa426ffab0a2d9c4b0b80938a3b083cf5ca1a86d6f431f397634e51cfb4",
+  "notes": "Settings page shows OTA test OK",
   "min_version": "1.3.0"
 }
