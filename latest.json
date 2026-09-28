@@ -1,8 +1,8 @@
 {
-  "version": "1.3.1",
-  "url": "https://github.com/49thMedia/nahl-scoreboard-firmware/releases/download/v1.3.1/nahl-scoreboard-v1.3.1.bin",
-  "size": 1686432,
-  "sha256": "a4e3aaa426ffab0a2d9c4b0b80938a3b083cf5ca1a86d6f431f397634e51cfb4",
-  "notes": "Settings page shows OTA test OK",
+  "version": "1.3.2",
+  "url": "https://github.com/49thMedia/nahl-scoreboard-firmware/releases/download/v1.3.2/nahl-scoreboard-v1.3.2.bin",
+  "size": 1691792,
+  "sha256": "55112831d0519d803e174352d3e525c7042bd8c3861d31dc3e1dddf6889fc931",
+  "notes": "Fixes first-try update rollback; adds update diagnostics on Settings",
   "min_version": "1.3.0"
 }

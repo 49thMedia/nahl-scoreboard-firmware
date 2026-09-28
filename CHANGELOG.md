@@ -5,6 +5,20 @@ Versioning: MAJOR.MINOR.PATCH
 - MINOR (x.1.x): larger updates and new features
 - MAJOR (1.x.x): major changes or redesigns
 
+## v1.3.2 (2026-09-28)
+
+### Fixed
+- The first over-the-air update could fall back to the old version by itself. A new version only counted as working after its whole first round of downloads (season, schedule, standings, and news) had finished. Any restart before then made the scoreboard go back to the previous version, for example a crash, a power dip, a replug, the reset button, or opening the Arduino Serial Monitor. A new version now counts as working after its first successful download, or after it has been connected to Wi-Fi and running for 1 minute, whichever comes first.
+- A new version is no longer sent back after 10 minutes just because the data sources or the internet were down. It only goes back to the previous version if it crashes or restarts before it has shown that it works, or if it can't connect to Wi-Fi and the setup hotspot goes unused for 10 minutes.
+- Opening setup (hold on the Settings page) or a factory reset right after an update no longer rolls the update back.
+- Tapping "Tap to install" again while an update was starting could queue it twice. The progress screen now appears right away and further taps are ignored.
+- Long downloads could starve a system task on the network core and trigger a watchdog restart. The scoreboard now gives it time during downloads.
+- The Wi-Fi driver no longer writes its own copy of the Wi-Fi settings to flash. They are already saved with the scoreboard settings.
+
+### Added
+- Update diagnostics. If an update falls back to the previous version, the Settings page shows "Update to vX failed, rolled back" on the Updates line. It alternates with the reason, for example "Reason: crash after 23 s (news fetch)". The message stays until the next successful update.
+- Every start logs the reset reason, and what the previous start was doing when it ended, on the serial port. The `ota` command prints it again.
+
 ## v1.3.1 (2026-09-28)
 
 ### Changed
