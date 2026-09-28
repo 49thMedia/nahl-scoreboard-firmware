@@ -5,6 +5,29 @@ Versioning: MAJOR.MINOR.PATCH
 - MINOR (x.1.x): larger updates and new features
 - MAJOR (1.x.x): major changes or redesigns
 
+## v2.0.0 (2026-09-28)
+
+### Added
+- **Live scoreboard.** While your team is playing, the first page becomes a live scoreboard: both teams' logos (away on the left, home on the right), the score, shots on goal for each team, the period and the game clock. The clock counts down on screen every second between updates. During intermissions it shows "1st INT" or "2nd INT" instead of the clock, and "End 3rd", "End OT" or "Shootout" when those apply. The line at the bottom names the last goal scorer, and a red LIVE badge sits at the top left.
+- The live data comes from GameSheet's live scoring, the same source gamesheetstats.com uses, and updates every 15 seconds. If live scoring can't be reached, the scoreboard falls back to the NAHL stats feed every 30 seconds. That feed has the score and shots, but no game clock.
+- **Screen stays on the game.** While your team's game is on, including intermissions, the pages no longer rotate. You can still tap to look at other pages. The screen comes back to the scoreboard 30 seconds after your last touch.
+- When the game ends, the final score ("FINAL", "FINAL/OT" or "FINAL/SO") stays on screen for 5 minutes. Then the pages rotate again, and Latest Result, Recent Results and Standings update to include the game.
+- Serial command `live`: shows which game is being watched, its score, shots and clock, and when the next check happens.
+
+### Changed
+- **Tapping:** tap the left half of the screen to go back one page, or the right half to go forward one page. Holding 5 seconds on the Settings page still opens setup, and holding 2 seconds on any other page still plays a test goal alert. A short tap on the Settings page's buttons still works as before.
+- **Fewer downloads when no game is on.** The schedule and results (every 2 minutes before), the standings (every 30 minutes before) and the news now refresh once every 24 hours. Around game time the scoreboard gets busier by itself:
+  - 3 hours before puck drop, it reads the schedule again, in case the start time changed.
+  - Starting 30 minutes before the scheduled start, it checks every minute whether the game has started.
+  - After the scheduled start, it checks every 30 seconds for the first 30 minutes, then every 2 minutes, for up to 4 hours in case the game is delayed.
+  - Between games it makes no requests besides the daily refresh.
+- A failed download is retried after 45 seconds, then at longer and longer gaps up to 30 minutes. It no longer waits a full day.
+- **Recent Results:** only the result letter is colored now, W in green and L in red. Everything else on the page is white. Overtime and shootout losses count as losses, so they show a red L, with a small white "OT" or "SO" next to the letter. The record line (for example 5-2-1-0) is still there, now in white.
+- The goal alert (LED flash and GOAL! banner) now comes from the live data, so it appears within about 15 seconds of the goal being entered. The scorer's name shows when the NAHL feed has it.
+
+### Removed
+- The old live mode, which read the schedule every 25 seconds during games. The live scoreboard replaces it.
+
 ## v1.3.6 (2026-09-28)
 
 ### Fixed

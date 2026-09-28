@@ -1,8 +1,8 @@
 {
-  "version": "1.3.6",
-  "url": "https://github.com/49thMedia/nahl-scoreboard-firmware/releases/download/v1.3.6/nahl-scoreboard-v1.3.6.bin",
-  "size": 1706288,
-  "sha256": "9fb3db7e22a0e22b7112b29724ddc957d8861863c68c6a15317088b826de9f3e",
-  "notes": "Retries cut-off downloads and names the failing feed in errors",
+  "version": "2.0.0",
+  "url": "https://github.com/49thMedia/nahl-scoreboard-firmware/releases/download/v2.0.0/nahl-scoreboard-v2.0.0.bin",
+  "size": 1716096,
+  "sha256": "d7d5e410f9c5ff6c8d0fd8c75d4eb17797051f7e439a003f87b6abae74538be9",
+  "notes": "Live game mode: locks on scoreboard with clock, shots and both logos; tap left/right to navigate; W/L colors",
   "min_version": "1.3.0"
 }
